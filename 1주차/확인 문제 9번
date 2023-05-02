@@ -1,0 +1,72 @@
+import java.util.Scanner; // Scanner를 사용하기 위해 유틸 가져옴
+
+public class Ex9
+{
+  public static void main(String[] args)
+  {
+    boolean run = true; //프로그램이 
+    int studentNum = 0; // 1번 선택에서 사용자가 입력할 학생 수를 저장함
+    int[] scores = null; // 학생수에 따라 점수가 달라지므로 빈 배열을 만들어 둠
+    Scanner scanner = new Scanner(System.in);
+    
+    while(run)
+    {
+      System.out.println("-----------------------------------------------");
+      System.out.printfln("1.학생수 |2.점수입력|3.점수리스트|4.분석|5.종료");
+      System.out.println("-----------------------------------------------");
+      System.out.printfln("선택>");
+      
+      int select = scanner.nextInt(); // select 변수에는 사용자가 입력하는 값이 저잗됨
+      
+      if(selectNo == 1) // 1번을 골랐을 경우
+      {
+        System.out.print("학생수>");
+        studentNum = scanner.nextInt(); //학생수를 입력하게 됨
+        scores = new int[studentNum]; // 학생수 만큼의 길이로 새 변수를 만듬
+        
+      }
+      else if(select == 2)
+      {
+        for(int i =0; i<studentNum; i++) // 학생수 만큼 반복
+        {
+          System.out.print("scores[" + i + "]>"); // 학생들을 순차적으로 알려줌
+          scores[i] = scanner.nextInt(); // 학생들의 점수를 배열에 각각 저장함
+        }
+      }
+      else if(select == 3)
+      {
+        for(int i = 0; i < studentNum; i++)
+        {
+          System.out.println("scores[" + i +"]: " + scores[i]); //학생들의 점수를 알려줌
+        }
+      }
+      else if(select == 4 )//문제 8번과 동일함
+      {
+        int max =0;
+        int sum = 0;
+        double avg = 0.0;
+        
+        for (int i = 0; i<studentNum; I++)
+        {
+          if(scores[i] > max)
+          {
+            max = scores[i];
+          }
+          sum += scores[i];
+        }
+        
+        avg = (double)sum / studentNum;
+        
+        System.out.println("최고 점수: " + max);
+        System.out.println("평균 점수: " + avg);
+        
+      }
+      else if(select == 5)
+      {
+        run = false; // 프로그램을 종료하기 위함.
+      }
+    }
+    
+    System.out.println("프로그램 종료");
+  }
+}

@@ -1,0 +1,25 @@
+1. 다음의 코드를 보고 출력될 결과값을 고르세요.
+float a = 10F;
+System.out.println(a);
+
+답 : 10.0
+
+2. 다음 괄호 안에 들어갈 수 있는 데이터 타입을 모두 고르세요.
+( ) a = 100F;
+
+답 : float,double
+
+3. 다음의 코드를 보고 출력될 결과값을 고르세요.
+float a = 100F;
+long b = 100L;
+double c = a + b;
+System.out.println(c);
+
+답 : 200.0
+
+4. 다음 코드에 에러가 발생하지 않고 실행되도록 괄호 안에 들어갈 수 있는 데이터 타입을 고르세요.
+( ) a = 10F;
+float b = a;
+double c = a;
+
+답 : float
